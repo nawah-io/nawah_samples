@@ -1,0 +1,23 @@
+<h1>Blog Posts</h1>
+<a [routerLink]="['/admin', 'dashboard']" class="btn btn-primary text-white">Back to Dashboard</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title (Arabic)</th>
+      <th>Title (English)</th>
+      <th>Create Time</th>
+      <th>Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let blog of blogs">
+      <td>{{ blog.title.ar_AE }}</td>
+      <td>{{ blog.title.en_AE }}</td>
+      <td>{{ blog.create_time }}</td>
+      <td>
+        <a [routerLink]="['/admin', 'blog-edit', blog._id]" class="btn btn-primary">Edit</a>
+        <button class="btn btn-danger" (click)="deletePost(blog._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

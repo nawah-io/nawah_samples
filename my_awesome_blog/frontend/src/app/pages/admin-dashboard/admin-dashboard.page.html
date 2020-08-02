@@ -1,0 +1,4 @@
+Howdy, {{ user?.name.en_AE }}!
+<a [routerLink]="['/admin', 'blog-new']" class="btn btn-primary text-white">New Blog Post</a>
+<a [routerLink]="['/admin', 'blog-list']" class="btn btn-primary text-white">All Blogs</a>
+<button class="btn btn-danger" (click)="signout()">Sign-out</button>
