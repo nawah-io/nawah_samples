@@ -94,6 +94,16 @@ include_js: false
         <p class="blog-post-meta">{{ blog.create_time }}</p>
 
         {{ blog.content.en_AE }}
+        <br>
+        <div *ngIf="comments$[blog._id] | async as blogComments$">
+            <ng-container *ngIf="blogComments$.args.count">
+              <div *ngFor="let comment of blogComments$.args.docs" class="card">
+                  {{ comment.content }}
+              </div>
+            </ng-container>
+            <div *ngIf="!blogComments$.args.count" class="alert alert-info">No comments</div>
+        </div>
+        <button *ngIf="!comments$[blog._id]" class="btn btn-secondary" (click)="loadComments(blog._id)">Load Comments</button>
 
       </div><!-- /.blog-post -->
 

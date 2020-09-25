@@ -14,6 +14,17 @@ export class HomePage {
     endpoint: 'blog/read'
   });
 
+  comments$: {
+    [key: string]: Observable<Res<any>>
+  } = {}
+
   constructor(private nawah: NawahService) { }
+
+  loadComments(blog_id: string): void { 
+    this.comments$[blog_id] = this.nawah.call({
+      endpoint: 'blog_comment/read',
+      query: [{ blog: blog_id }]
+    });
+  }
 
 }

@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.nawah.init({
-      api: 'ws://localhost:8081/ws',
-      anonToken: '__ANON_TOKEN_',
+      api: 'ws://localhost:58081/ws',
+      anonToken: '__ANON_TOKEN_490065107485737215087406',
       authAttrs: ['email'],
       appId: 'APP_ID',
     });
