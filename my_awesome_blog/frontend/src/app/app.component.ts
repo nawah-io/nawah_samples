@@ -2,21 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { NawahService } from 'ng-nawah';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'my-awesome-blog';
+	title = 'my-awesome-blog-web';
 
-  constructor(private nawah: NawahService) {}
+	constructor(private nawah: NawahService) { }
 
-  ngOnInit() {
-    this.nawah.init({
-      api: 'ws://localhost:58081/ws',
-      anonToken: '__ANON_TOKEN_490065107485737215087406',
-      authAttrs: ['email'],
-      appId: 'APP_ID',
-    });
-  }
+	ngOnInit() {
+		this.nawah.init({
+			api: 'ws://localhost:8081/ws',
+			anonToken: '__ANON_TOKEN_307880618201630497643197',
+			authAttrs: ['email'],
+			appId: 'APP_ID',
+		});
+	}
 }
