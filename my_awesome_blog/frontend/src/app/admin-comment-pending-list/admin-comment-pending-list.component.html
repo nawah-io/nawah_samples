@@ -1,0 +1,25 @@
+<h1>Pending Comments</h1>
+<a [routerLink]="['/admin', 'dashboard']" class="btn btn-primary text-white">Back to Dashboard</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Content</th>
+			<th>Create Time</th>
+			<th>Operations</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let comment of comments">
+			<td>{{ comment.name }}</td>
+			<td>{{ comment.email }}</td>
+			<td>{{ comment.content }}</td>
+			<td>{{ comment.create_time }}</td>
+			<td>
+				<button class="btn btn-success" (click)="approveComment(comment._id)">Approve</button>
+				<button class="btn btn-danger" (click)="deleteComment(comment._id)">Delete</button>
+			</td>
+		</tr>
+	</tbody>
+</table>

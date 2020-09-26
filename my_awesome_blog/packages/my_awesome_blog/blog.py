@@ -1,6 +1,7 @@
 from nawah.base_module import BaseModule
 from nawah.classes import ATTR, PERM
 
+
 class Blog(BaseModule):
     collection = 'blogs'
     attrs = {

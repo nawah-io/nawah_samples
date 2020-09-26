@@ -1,0 +1,28 @@
+<!-- ---
+layout: examples
+title: Signin Template
+extra_css:
+  - "signin.css"
+body_class: "text-center"
+include_js: false
+--- -->
+
+<main class="form-signin">
+	<form class="form-signin" (submit)="auth()">
+		<!-- ... -->
+		<label for="inputEmail" class="visually-hidden">Email address</label>
+		<input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required
+			autofocus [(ngModel)]="email">
+		<label for="inputPassword" class="visually-hidden">Password</label>
+		<input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required
+			[(ngModel)]="password">
+		<div class="checkbox mb-3">
+			<label>
+				<input type="checkbox" value="remember-me"> Remember me
+			</label>
+		</div>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+		<p class="mt-5 mb-3 text-muted">&copy; 2017-< year>
+		</p>
+	</form>
+</main>

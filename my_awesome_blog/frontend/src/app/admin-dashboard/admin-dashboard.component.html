@@ -1,0 +1,7 @@
+<button class="btn btn-danger" (click)="signout()">Sign-out</button>
+<h1>Howdy, {{ user?.name.en_AE }}!</h1>
+<ul>
+	<li><a [routerLink]="['/admin', 'blog-list']">Blog Posts</a></li>
+	<li><a [routerLink]="['/admin', 'blog-new']">New Blog</a></li>
+	<li><a [routerLink]="['/admin', 'comment-list']">Comments List</a></li>
+</ul>

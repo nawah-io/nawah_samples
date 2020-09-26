@@ -1,4 +1,4 @@
-from nawah.classes import APP_CONFIG, PACKAGE_CONFIG, ATTR
+from nawah.classes import APP_CONFIG, ATTR, PACKAGE_CONFIG
 from nawah.enums import NAWAH_VALUES
 
 config = APP_CONFIG(
@@ -71,9 +71,9 @@ config = APP_CONFIG(
         # '...':'...'
     },
     # Define ADMIN password that will be used to generate the hashes
-    admin_password='W!d>G0lU5)X5#oR]~p',
+    admin_password='Rg!2/U$~]M/h!F>REW',
     # Define ANON token. This token is used as salt across Nawah framework so it is very good idea to change it from default token
-    anon_token='__ANON_TOKEN_319708056058967728547324',
+    anon_token='__ANON_TOKEN_307880618201630497643197',
     # Define default privileges any authenticated user is having. Usually it's suggested all users have file: create, setting: update, privileges as they are basic access requirements to any app, however, if you create proxy modules where you would like to have more control over these privileges you can always drop the default privileges
     default_privileges={
         'file': ['create'],
